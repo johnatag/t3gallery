@@ -2,7 +2,7 @@
 
 ## TODO
 
-- [ ] Make it deploy (vercel)
+- [x] Make it deploy (vercel)
 - [ ] Scaffold basic ui with mock data
 - [ ] Actually set up a database (vercel postgres)
 - [ ] Attach database to UI
@@ -20,4 +20,7 @@
     - Ever since the publishing of the video, new releases of these deps have been published along with breaking changes
     - My lack of experience using this stack in general made the debugging process a lot lenghtier
     - Google Fonts not loading for some reason...
+    - To fix this, I essentially just recreated the same stuff as theo had manually by checking his first initial commit on Github
+
+- 
 
