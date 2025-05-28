@@ -31,4 +31,4 @@
     - cookies(): similar to headers() -> difference lies in usage between header vs cookie
     - 
 
-
+- Didn't use the same version of clerk as Theo, as Clerk failed to load using this version

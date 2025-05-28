@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Gallery } from "./components/gallery.component";
+import { Gallery } from "./_components/gallery.component";
 import { db } from "~/server/db";
 
 export const dynamic = "force-dynamic"

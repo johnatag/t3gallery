@@ -1,3 +1,5 @@
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+
 interface TopNavProps {
 	children: React.ReactNode;
 }
@@ -7,7 +9,15 @@ export function TopNav() {
 		<>
 			<nav className="flex w-full items-center justify-between border-b p-4 text-xl font-semibold">
 				<div>Gallery</div>
-				<div>Sign In</div>
+
+				<div>
+					<SignedOut>
+						<SignInButton />
+					</SignedOut>
+					<SignedIn>
+						<UserButton />
+					</SignedIn>
+				</div>
 			</nav>
 		</>
 	);
