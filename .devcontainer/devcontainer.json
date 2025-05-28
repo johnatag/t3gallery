@@ -16,7 +16,8 @@
 				"dbaeumer.vscode-eslint",
 				"esbenp.prettier-vscode",
 				"bradlc.vscode-tailwindcss",
-				"imgildev.vscode-nextjs-generator"
+				"imgildev.vscode-nextjs-generator",
+				"ms-vscode.vscode-typescript-next"
 			]
 		}
 	}
