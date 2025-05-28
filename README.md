@@ -7,9 +7,10 @@
 - [x] Tiddy up build process
 - [x] Actually set up a database (vercel postgres)
 - [x] Attach database to UI
-- [ ] Add authentification (w/ clerk)
-- [ ] Add image upload
-- [ ] "taint" (server-only)
+- [x] Add authentification (w/ clerk)
+- [x] Add image upload
+- [x] "taint" (server-only)
+- [x] Use Next/Image component
 - [ ] Error management (w/ Sentry)
 - [ ] Routing/Image page (parallel route)
 - [ ] Delete button (w/ Server Actions)
@@ -33,3 +34,8 @@
     - 
 
 - Didn't use the same version of clerk as Theo, as Clerk failed to load using this version
+
+- What is React Taint?
+Feature in React that allows the marking of objects in order to prevent data leakage -> taint comes from taint analysis (LOG3210)
+Mark stuff to never pass to client from server
+
