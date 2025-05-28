@@ -14,7 +14,7 @@ export async function Gallery() {
 	return (
 		<>
 			<div className="flex flex-wrap">{
-				 [...images, ...images, ...images].map((image) => (
+				 images.map((image) => (
 				<div key={image.id} className="w-1/2 p-4">
 					<img src={image.url} alt="image"/>
 					<div>{image.name}</div>
