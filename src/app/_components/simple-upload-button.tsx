@@ -73,40 +73,46 @@ function LoadingSpinnerSVG() {
 
 export function SimpleUploadButton() {
   const router = useRouter();
+
   const posthog = usePostHog();
 
   const { inputProps } = useUploadThingInputProps("imageUploader", {
     onUploadBegin() {
-        posthog.capture("upload_begin");
-        toast(
-            <div className="flex items-center gap-2 text-white">
-            <LoadingSpinnerSVG /> <span className="text-lg">Uploading...</span>
-            </div>,
-            {
-                duration: 100000,
-                id: "upload-begin",
-            },
-        );
+      posthog.capture("upload_begin");
+      toast(
+        <div className="flex items-center gap-2 text-white">
+          <LoadingSpinnerSVG /> <span className="text-lg">Uploading...</span>
+        </div>,
+        {
+          duration: 100000,
+          id: "upload-begin",
+        },
+      );
+    },
+    onUploadError(error) {
+      posthog.capture("upload_error", { error });
+      toast.dismiss("upload-begin");
+      toast.error("Upload failed");
     },
     onClientUploadComplete() {
-        toast.dismiss("upload-begin");
-        toast("Upload complete!");
+      toast.dismiss("upload-begin");
+      toast("Upload complete!");
 
-        router.refresh();
+      router.refresh();
     },
   });
 
   return (
-        <div>
-            <label htmlFor="upload-button" className="cursor-pointer">
-                <UploadSVG />
-            </label>
-            <input
-                id="upload-button"
-                type="file"
-                className="sr-only"
-                {...inputProps}
-            />
-        </div>
+    <div>
+      <label htmlFor="upload-button" className="cursor-pointer">
+        <UploadSVG />
+      </label>
+      <input
+        id="upload-button"
+        type="file"
+        className="sr-only"
+        {...inputProps}
+      />
+    </div>
   );
 }

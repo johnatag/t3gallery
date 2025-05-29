@@ -41,3 +41,9 @@ Mark stuff to never pass to client from server
 
 - Slight difference in the Sentry setup (see global-error page)
 
+## A challenge to the viewer
+
+- Fix the page layout for images of different resolutions
+- "Selecting" images on the gallery page
+- "infinite scroll"
+- Folders/albums

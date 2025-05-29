@@ -33,7 +33,11 @@
     "zod": "^3.22.4",
     "next-themes": "^0.3.0",
     "sonner": "^1.4.41",
-    "posthog-js": "^1.116.6"
+    "posthog-js": "^1.116.6",
+    "@radix-ui/react-slot": "^1.0.2",
+    "posthog-node": "^4.0.0",
+    "@upstash/ratelimit": "^1.0.1",
+    "@upstash/redis": "^1.29.0"
   },
   "devDependencies": {
     "@types/eslint": "^8.56.2",
