@@ -27,7 +27,7 @@ const config = withSentryConfig(
 
     // Suppresses source map uploading logs during build
     silent: true,
-    org: "t3gg",
+    org: "johnatan-gao",
     project: "t3-gallery-video",
   },
   {
