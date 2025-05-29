@@ -39,3 +39,5 @@
 Feature in React that allows the marking of objects in order to prevent data leakage -> taint comes from taint analysis (LOG3210)
 Mark stuff to never pass to client from server
 
+- Slight difference in the Sentry setup (see global-error page)
+
