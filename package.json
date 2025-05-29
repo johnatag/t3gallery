@@ -32,7 +32,8 @@
     "uploadthing": "^6.7.0",
     "zod": "^3.22.4",
     "next-themes": "^0.3.0",
-    "sonner": "^1.4.41"
+    "sonner": "^1.4.41",
+    "posthog-js": "^1.116.6"
   },
   "devDependencies": {
     "@types/eslint": "^8.56.2",

@@ -14,7 +14,20 @@ const coreConfig = {
   },
   eslint: {
     ignoreDuringBuilds: true,
-  }
+  },
+
+  async rewrites() {
+    return [
+      {
+        source: "/ingest/static/:path*",
+        destination: "https://us-assets.i.posthog.com/static/:path*",
+      },
+      {
+        source: "/ingest/:path*",
+        destination: "https://us.i.posthog.com/:path*",
+      },
+    ];
+  },
 };
 
 import { withSentryConfig } from "@sentry/nextjs";
@@ -27,8 +40,8 @@ const config = withSentryConfig(
 
     // Suppresses source map uploading logs during build
     silent: true,
-    org: "johnatan-gao",
-    project: "javascript-nextjs",
+    org: "t3gg",
+    project: "t3-gallery-video",
   },
   {
     // For all available options, see:
